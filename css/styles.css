@@ -1,0 +1,135 @@
+/* ===== MAIN STYLES ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #ff69b4; color: #eee;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+
+header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 24px; border-bottom: 1px solid #222;
+}
+
+.header-logo { width: 36px; height: 36px; }
+
+header h1 { font-size: 22px; font-weight: 600; }
+
+main {
+  flex: 1; max-width: 480px; width: 100%;
+  margin: 0 auto; padding: 24px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+footer {
+  text-align: center; padding: 16px;
+  font-size: 13px; color: #555; border-top: 1px solid #222;
+}
+
+button {
+  background: #5a8dee; color: #fff; border: none;
+  padding: 10px 20px; border-radius: 6px;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover { background: #4a7cd8; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+h2 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+
+p { color: #aaa; font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
+
+/* ===== TIMER COMPONENT ===== */
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.timer-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.timer-display {
+  font-size: 72px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.empty-msg {
+  color: #555; font-style: italic; font-size: 13px;
+}
+
+.session-entry {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid #222;
+  font-size: 14px; color: #aaa;
+}
+.session-entry:last-child { border-bottom: none; }
+
+.session-type {
+  font-weight: 600; color: #5a8dee;
+}
+
+.session-time {
+  font-family: monospace; font-size: 12px; color: #666;
+}
+
+/* ===== CONTROLS (from inline styles) ===== */
+.controls {
+  display: flex; gap: 10px; justify-content: center;
+  margin-top: 20px;
+}
+.controls button {
+  min-width: 90px;
+}
+
+#mode-label {
+  font-size: 14px; text-transform: uppercase;
+  letter-spacing: 0.15em; color: #888; margin-bottom: 8px;
+}
+
+/* ===== TIME EDITOR ===== */
+.time-editor {
+  display: flex; gap: 12px; justify-content: center; align-items: flex-end;
+  margin: 16px 0 12px 0; flex-wrap: wrap;
+}
+
+.time-input-group {
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.time-input-group label {
+  font-size: 12px; color: #888; text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.time-input-group input {
+  width: 60px; padding: 6px 8px; background: #0a0a0a; color: #fff;
+  border: 1px solid #333; border-radius: 4px; font-size: 14px;
+  font-weight: 600; text-align: center;
+}
+
+.time-input-group input:focus {
+  outline: none; border-color: #5a8dee; box-shadow: 0 0 0 2px rgba(90, 141, 238, 0.2);
+}
+
+.btn-small {
+  padding: 6px 12px; font-size: 12px; min-width: auto;
+}
+
+.time-editor input::-webkit-outer-spin-button,
+.time-editor input::-webkit-inner-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
+
+.time-editor input[type=number] {
+  -moz-appearance: textfield;
+}
